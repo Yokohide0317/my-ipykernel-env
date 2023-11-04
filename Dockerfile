@@ -32,6 +32,8 @@ ENV TERM xterm
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
+ENV PATH /home/$USERNAME/.local/bin:$PATH
+
 RUN pip install --no-cache-dir \
     autopep8 \
     flake8
